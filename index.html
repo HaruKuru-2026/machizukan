@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>まちの精霊図鑑</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>まちの精霊図鑑</h1>
+
+    <div class="dev-warning">
+        ⚠ 試作版（開発中）
+    </div>
+
+    <button onclick="resetData()">
+        開発用：データをリセット
+    </button>
+
+    <p id="count">発見数 0 / 15</p>
+
+    <div class="card">
+
+        <h2 id="char1-name">No.001 ???</h2>
+
+        <img
+            id="char1-image"
+            src="images/question.png"
+            width="200"
+        >
+
+        <p id="char1-desc">
+            まだ発見していません
+        </p>
+
+        <button onclick="discoverCharacter1()">
+            発見する
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
