@@ -4,7 +4,7 @@ function discoverCharacter1() {
         "No.001 ドングリくん";
 
     document.getElementById("char1-image").src =
-        "images/Dongri.png";
+        "Dongri.png";
 
     document.getElementById("char1-desc").textContent =
         "街のどこかに現れる謎のドングリ";
@@ -41,7 +41,7 @@ window.onload = function () {
             "No.001 ドングリくん";
 
         document.getElementById("char1-image").src =
-            "images/Dongri.png";
+            "Dongri.png";
 
         document.getElementById("char1-desc").textContent =
             "街のどこかに現れる謎のドングリ";
