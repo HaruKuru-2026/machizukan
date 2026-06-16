@@ -52,6 +52,23 @@ window.onload = function () {
     unlockCharacterFromURL();
 }
 
+function discoverCharacter2() {
+
+    document.getElementById("char2-name").textContent =
+        "No.002 ヤチュウゴロン";
+
+    document.getElementById("char2-image").src =
+        "Yakutyuugoron.jpg";
+
+    document.getElementById("char2-desc").textContent =
+        "夜のどこかに現れる謎の怪物";
+
+    localStorage.setItem("char2", "found");
+
+    updateCount();
+}
+
+
 function unlockCharacterFromURL() {
 
     const params = new URLSearchParams(window.location.search);
