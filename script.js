@@ -12,6 +12,12 @@ function discoverCharacter1() {
     localStorage.setItem("char1", "found");
 
     updateCount();
+
+    showDiscoverScreen(
+    "ドングリくん",
+    "Dongri.png",
+    "街のどこかに現れる謎のドングリ"
+);
 }
 
 function updateCount() {
@@ -101,4 +107,25 @@ function unlockCharacterFromURL() {
 
     discoverCharacter2();
     }
+}
+
+function showDiscoverScreen(name, image, desc) {
+
+    document.getElementById("discover-image").src =
+        image;
+
+    document.getElementById("discover-name").textContent =
+        name;
+
+    document.getElementById("discover-desc").textContent =
+        desc;
+
+    document.getElementById("discover-screen").style.display =
+        "block";
+}
+
+function closeDiscoverScreen() {
+
+    document.getElementById("discover-screen").style.display =
+        "none";
 }
