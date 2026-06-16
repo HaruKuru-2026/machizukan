@@ -15,10 +15,13 @@ function discoverCharacter1() {
 }
 
 function updateCount() {
-
-    let count = 0;
+let count = 0;
 
     if (localStorage.getItem("char1") === "found") {
+        count++;
+    }
+
+    if (localStorage.getItem("char2") === "found") {
         count++;
     }
 
@@ -47,10 +50,24 @@ window.onload = function () {
             "街のどこかに現れる謎のドングリ";
     }
 
+    if (localStorage.getItem("char2") === "found") {
+
+    document.getElementById("char2-name").textContent =
+        "No.002 ヤチュウゴロン";
+
+    document.getElementById("char2-image").src =
+        "Yakutyuugoron.jpg";
+
+    document.getElementById("char2-desc").textContent =
+        "夜のどこかに現れる謎の怪物";
+}
+
     updateCount();
 
     unlockCharacterFromURL();
 }
+
+
 
 function discoverCharacter2() {
 
@@ -78,5 +95,10 @@ function unlockCharacterFromURL() {
     if (charId === "1") {
 
         discoverCharacter1();
+    }
+
+    if (charId === "2") {
+
+    discoverCharacter2();
     }
 }
