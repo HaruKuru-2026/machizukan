@@ -7,7 +7,17 @@
     <title>まちの精霊図鑑</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+
+    if(params.has("char"))
+    {
+        location.href = "library.html" + location.search;
+    }
+    </script>
 </head>
+
 
 <body id="index">
 
