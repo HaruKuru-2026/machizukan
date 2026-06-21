@@ -38,7 +38,6 @@ let count = 0;
 function resetData() {
 
     localStorage.clear();
-
     location.reload();
 }
 
@@ -129,3 +128,4 @@ function closeDiscoverScreen() {
     document.getElementById("discover-screen").style.display =
         "none";
 }
+

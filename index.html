@@ -1,84 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>まちの精霊図鑑</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="index">
 
-    <div id="discover-screen" style="display:none;">
-
-    <h1>✨発見！✨</h1>
-
-    <img id="discover-image" width="300">
-
-    <h2 id="discover-name"></h2>
-
-    <p id="discover-desc"></p>
-
-    <button onclick="closeDiscoverScreen()">
-        図鑑を見る
-    </button>
+    <div class="title">
+         <h1>街の精霊図鑑</h1>
+         <p>精霊の眠る街へようこそ</p>
 
     </div>
 
-    <h1>まちの精霊図鑑</h1>
-
-    <div class="dev-warning">
-        ⚠ 試作版（開発中）
+    <div class="menu">
+        <h2><a href="#">遊び方</a></h2>
+        <h2><a href="library.html">図鑑</a></h2>
     </div>
-
-    <button onclick="resetData()">
-        開発用：データをリセット
-    </button>
-
-    <p id="count">発見数 0 / 15</p>
-
-    <div class="card">
-
-        <h2 id="char1-name">No.001 ???</h2>
-
-        <img
-            id="char1-image"
-            src="question.jpg"
-            width="200"
-        >
-
-        <p id="char1-desc">
-            まだ発見していません
-        </p>
-
-        <button onclick="discoverCharacter1()">
-            発見する
-        </button>
-
-    </div>
-
-    <div class="card">
-
-    <h2 id="char2-name">No.002 ???</h2>
-
-    <img
-        id="char2-image"
-        src="question.jpg"
-        width="200"
-    >
-
-    <p id="char2-desc">
-        まだ発見していません
-    </p>
-
-    <button onclick="discoverCharacter2()">
-        発見する
-    </button>
-
-    </div>
-
-    <script src="script.js"></script>
 
 </body>
 
