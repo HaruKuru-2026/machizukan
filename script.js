@@ -1,131 +1,291 @@
+// =========================
+// キャラクター情報
+// =========================
+
+const characters = {
+    "1": {
+        storageKey: "machizukan_char1",
+        number: "No.001",
+        name: "ドングリくん",
+        image: "Dongri.png",
+        desc: "街のどこかに現れる謎のドングリ"
+    },
+
+    "2": {
+        storageKey: "machizukan_char2",
+        number: "No.002",
+        name: "ヤチュウゴロン",
+        image: "Yakutyuugoron.jpg",
+        desc: "夜のどこかに現れる謎の怪物"
+    }
+};
+
+
+// =========================
+// キャラクターを発見
+// =========================
+
+function discoverCharacter(charId, showScreen = true) {
+
+    const character = characters[charId];
+
+    if (!character) {
+        return;
+    }
+
+
+    // 図鑑の表示を変更
+
+    document.getElementById(`char${charId}-name`).textContent =
+        character.number + " " + character.name;
+
+    document.getElementById(`char${charId}-image`).src =
+        character.image;
+
+    document.getElementById(`char${charId}-image`).alt =
+        character.name;
+
+    document.getElementById(`char${charId}-desc`).textContent =
+        character.desc;
+
+
+    // 発見済みとして保存
+
+    localStorage.setItem(
+        character.storageKey,
+        "found"
+    );
+
+
+    // 発見数を更新
+
+    updateCount();
+
+
+    // 発見演出を表示
+
+    if (showScreen) {
+
+        showDiscoverScreen(
+            character.name,
+            character.image,
+            character.desc
+        );
+
+    }
+
+}
+
+
+// =========================
+// キャラ1を発見
+// =========================
+
 function discoverCharacter1() {
 
-    document.getElementById("char1-name").textContent =
-        "No.001 ドングリくん";
+    discoverCharacter("1");
 
-    document.getElementById("char1-image").src =
-        "Dongri.png";
-
-    document.getElementById("char1-desc").textContent =
-        "街のどこかに現れる謎のドングリ";
-
-    localStorage.setItem("char1", "found");
-
-    updateCount();
-
-    showDiscoverScreen(
-    "ドングリくん",
-    "Dongri.png",
-    "街のどこかに現れる謎のドングリ"
-);
-}
-
-function updateCount() {
-let count = 0;
-
-    if (localStorage.getItem("char1") === "found") {
-        count++;
-    }
-
-    if (localStorage.getItem("char2") === "found") {
-        count++;
-    }
-
-    document.getElementById("count").textContent =
-        "発見数 " + count + " / 15";
-}
-
-function resetData() {
-
-    localStorage.clear();
-    location.reload();
-}
-
-window.onload = function () {
-
-    if (localStorage.getItem("char1") === "found") {
-
-        document.getElementById("char1-name").textContent =
-            "No.001 ドングリくん";
-
-        document.getElementById("char1-image").src =
-            "Dongri.png";
-
-        document.getElementById("char1-desc").textContent =
-            "街のどこかに現れる謎のドングリ";
-    }
-
-    if (localStorage.getItem("char2") === "found") {
-
-    document.getElementById("char2-name").textContent =
-        "No.002 ヤチュウゴロン";
-
-    document.getElementById("char2-image").src =
-        "Yakutyuugoron.jpg";
-
-    document.getElementById("char2-desc").textContent =
-        "夜のどこかに現れる謎の怪物";
-}
-
-    updateCount();
-
-    unlockCharacterFromURL();
 }
 
 
+// =========================
+// キャラ2を発見
+// =========================
 
 function discoverCharacter2() {
 
-    document.getElementById("char2-name").textContent =
-        "No.002 ヤチュウゴロン";
+    discoverCharacter("2");
 
-    document.getElementById("char2-image").src =
-        "Yakutyuugoron.jpg";
-
-    document.getElementById("char2-desc").textContent =
-        "夜のどこかに現れる謎の怪物";
-
-    localStorage.setItem("char2", "found");
-
-    updateCount();
 }
 
+
+// =========================
+// 発見数を更新
+// =========================
+
+function updateCount() {
+
+    let count = 0;
+
+
+    for (const charId in characters) {
+
+        const character = characters[charId];
+
+        if (
+            localStorage.getItem(
+                character.storageKey
+            ) === "found"
+        ) {
+            count++;
+        }
+
+    }
+
+
+    document.getElementById("count").textContent =
+        "発見数 " +
+        count +
+        " / 15";
+
+}
+
+
+// =========================
+// 保存済みデータを読み込む
+// =========================
+
+function loadSavedCharacters() {
+
+    for (const charId in characters) {
+
+        const character = characters[charId];
+
+        if (
+            localStorage.getItem(
+                character.storageKey
+            ) === "found"
+        ) {
+
+            // 発見画面は出さずに
+            // 図鑑だけ復元する
+
+            discoverCharacter(
+                charId,
+                false
+            );
+
+        }
+
+    }
+
+}
+
+
+// =========================
+// データをリセット
+// =========================
+
+function resetData() {
+
+    const result = confirm(
+        "図鑑の発見データをリセットしますか？"
+    );
+
+
+    if (!result) {
+        return;
+    }
+
+
+    for (const charId in characters) {
+
+        const character = characters[charId];
+
+        localStorage.removeItem(
+            character.storageKey
+        );
+
+    }
+
+
+    location.reload();
+
+}
+
+
+// =========================
+// URLからキャラクターを発見
+// =========================
 
 function unlockCharacterFromURL() {
 
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(
+        window.location.search
+    );
 
-    const charId = params.get("char");
 
-    if (charId === "1") {
+    const charId =
+        params.get("char");
 
-        discoverCharacter1();
+
+    if (characters[charId]) {
+
+        discoverCharacter(charId);
+
     }
 
-    if (charId === "2") {
-
-    discoverCharacter2();
-    }
 }
 
-function showDiscoverScreen(name, image, desc) {
 
-    document.getElementById("discover-image").src =
-        image;
+// =========================
+// 発見画面を表示
+// =========================
 
-    document.getElementById("discover-name").textContent =
-        name;
+function showDiscoverScreen(
+    name,
+    image,
+    desc
+) {
 
-    document.getElementById("discover-desc").textContent =
-        desc;
+    document.getElementById(
+        "discover-image"
+    ).src = image;
 
-    document.getElementById("discover-screen").style.display =
-        "block";
+
+    document.getElementById(
+        "discover-image"
+    ).alt = name;
+
+
+    document.getElementById(
+        "discover-name"
+    ).textContent = name;
+
+
+    document.getElementById(
+        "discover-desc"
+    ).textContent = desc;
+
+
+    document.getElementById(
+        "discover-screen"
+    ).style.display = "flex";
+
 }
+
+
+// =========================
+// 発見画面を閉じる
+// =========================
 
 function closeDiscoverScreen() {
 
-    document.getElementById("discover-screen").style.display =
-        "none";
+    document.getElementById(
+        "discover-screen"
+    ).style.display = "none";
+
 }
 
+
+// =========================
+// ページを開いたとき
+// =========================
+
+window.onload = function () {
+
+    // 前に発見したキャラを復元
+
+    loadSavedCharacters();
+
+
+    // 発見数を更新
+
+    updateCount();
+
+
+    // URLに ?char=1 などがあれば発見
+
+    unlockCharacterFromURL();
+
+};

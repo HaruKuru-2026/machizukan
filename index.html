@@ -1,36 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>まちの精霊図鑑</title>
 
     <link rel="stylesheet" href="style.css">
 
     <script>
-    const params = new URLSearchParams(window.location.search);
+        const params = new URLSearchParams(window.location.search);
 
-    if(params.has("char"))
-    {
-        location.href = "library.html" + location.search;
-    }
+        if (params.has("char")) {
+            location.href = "library.html" + location.search;
+        }
     </script>
 </head>
 
-
 <body id="index">
 
-    <div class="title">
-         <h1>街の精霊図鑑</h1>
-         <p>精霊の眠る街へようこそ</p>
+    <main class="top-content">
 
-    </div>
+        <div class="title">
 
-    <div class="menu">
-        <h2><a href="#">遊び方</a></h2>
-        <h2><a href="library.html">図鑑</a></h2>
-    </div>
+            <div class="title-decoration">
+                🌹　🌿　✨　🌿　🌹
+            </div>
+
+            <h1>まちの精霊図鑑</h1>
+
+            <p>
+                いつもの街に、まだ見ぬ精霊がいる。
+            </p>
+
+        </div>
+
+
+        <div class="menu">
+
+            <a href="#how-to-play" class="menu-button">
+                <span class="menu-icon">📖</span>
+                <span>遊び方</span>
+            </a>
+
+            <a href="library.html" class="menu-button">
+                <span class="menu-icon">📚</span>
+                <span>図鑑を見る</span>
+            </a>
+
+        </div>
+
+
+        <section id="how-to-play" class="how-to-play">
+
+            <h2>遊び方</h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>街を歩いて<br>QRコードを探そう</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>QRコードを<br>スマホで読み取ろう</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>新しい精霊を<br>発見して図鑑に登録！</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ロゴエリア -->
+    <footer class="sponsor">
+
+        <div class="sponsor-logos">
+
+            <img 
+                class="school-logo"
+                src="c:\Users\sagar\OneDrive\デスクトップ\machizukan\images\banner1.gif" 
+                alt="高校のロゴ">
+
+            <div class="logo-divider"></div>
+
+            <img 
+                src="c:\Users\sagar\OneDrive\デスクトップ\machizukan\images\pc_header_logo.png" 
+                alt="茨木市のロゴ">
+
+        </div>
+
+    </footer>
 
 </body>
 

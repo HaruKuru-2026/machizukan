@@ -1,98 +1,1372 @@
+/* ========================================
+   まちの精霊図鑑
+   茨木市イメージ
+======================================== */
+
+
+/* ========================================
+   自分で変えやすい色
+======================================== */
+
+:root {
+
+    /* 深い緑 */
+    --green-dark: #254d38;
+
+    /* 普通の緑 */
+    --green: #4d7c5a;
+
+    /* 明るい緑 */
+    --green-light: #b9d9b5;
+
+    /* バラをイメージした色 */
+    --rose: #c85d72;
+
+    /* 明るいバラ色 */
+    --rose-light: #f3c5cd;
+
+    /* クリーム色 */
+    --cream: #fffaf0;
+
+    /* 文字色 */
+    --text: #334238;
+
+    /* 影 */
+    --shadow: rgba(37, 77, 56, 0.15);
+
+}
+
+
+/* ========================================
+   基本設定
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
-    font-family: sans-serif;
-    background: #f4f8f2;
-    text-align: center;
+
     margin: 0;
-    padding: 20px;
+
+    min-height: 100vh;
+
+    font-family:
+        "Hiragino Sans",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(243, 197, 205, 0.7),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(185, 217, 181, 0.8),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #fffaf0 0%,
+            #eaf3e4 55%,
+            #c9dfc5 100%
+        );
+
 }
 
-h1 {
-    color: #2d5a27;
-    margin-bottom: 10px;
-}
 
-.dev-warning {
-    background: #fff3cd;
-    color: #856404;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.card {
-    background: white;
-    width: 280px;
-    margin: 20px auto;
-    padding: 20px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    border-radius: 15px;
-}
+/* ========================================
+   共通ボタン
+======================================== */
 
 button {
-    background: #4caf50;
-    color: white;
 
     border: none;
 
-    padding: 10px 20px;
+    padding: 13px 24px;
 
-    border-radius: 10px;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rose),
+            #a94359
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
 
     cursor: pointer;
 
-    font-size: 16px;
+    box-shadow:
+        0 4px 0 #803247,
+        0 8px 18px rgba(100, 40, 50, 0.18);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
 }
+
 
 button:hover {
-    transform: scale(1.05);
+
+    transform:
+        translateY(-2px);
+
 }
+
+
+button:active {
+
+    transform:
+        translateY(3px);
+
+    box-shadow:
+        0 1px 0 #803247;
+
+}
+
+
+/* ========================================
+   トップページ
+======================================== */
+
+#index {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* メイン部分 */
+
+.top-content {
+
+    flex: 1;
+
+    width: 100%;
+
+    padding:
+        60px
+        20px
+        70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ========================================
+   タイトルカード
+======================================== */
+
+.title {
+
+    width:
+        min(
+            92%,
+            560px
+        );
+
+    padding:
+        42px
+        30px;
+
+    text-align: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.88
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 20px 50px
+        var(--shadow);
+
+}
+
+
+.title-decoration {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+}
+
+
+.title h1 {
+
+    margin:
+        0
+        0
+        15px;
+
+    color:
+        var(--green-dark);
+
+    font-size:
+        clamp(
+            34px,
+            9vw,
+            54px
+        );
+
+    letter-spacing:
+        0.08em;
+
+    text-shadow:
+        0 2px 0 white;
+
+}
+
+
+.title p {
+
+    margin: 0;
+
+    color: #6d6670;
+
+    font-size:
+        clamp(
+            15px,
+            4vw,
+            18px
+        );
+
+    line-height: 1.8;
+
+}
+
+
+/* ========================================
+   トップメニュー
+======================================== */
+
+.menu {
+
+    width:
+        min(
+            92%,
+            440px
+        );
+
+    margin-top: 28px;
+
+    display: grid;
+
+    gap: 14px;
+
+}
+
+
+.menu-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding:
+        18px
+        25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    color:
+        var(--green-dark);
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 20px
+        var(--shadow);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.menu-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 13px 25px
+        rgba(
+            37,
+            77,
+            56,
+            0.2
+        );
+
+}
+
+
+.menu-icon {
+
+    font-size: 23px;
+
+}
+
+
+/* ========================================
+   遊び方
+======================================== */
+
+.how-to-play {
+
+    width:
+        min(
+            92%,
+            700px
+        );
+
+    margin-top: 60px;
+
+    padding:
+        35px
+        20px;
+
+    text-align: center;
+
+}
+
+
+.how-to-play h2 {
+
+    margin:
+        0
+        0
+        25px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 28px;
+
+}
+
+
+.steps {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 15px;
+
+}
+
+
+.step {
+
+    padding:
+        22px
+        12px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 18px
+        rgba(
+            37,
+            77,
+            56,
+            0.08
+        );
+
+}
+
+
+.step-number {
+
+    width: 38px;
+
+    height: 38px;
+
+    margin:
+        0
+        auto
+        12px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--rose);
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.step p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ========================================
+   下の白いロゴ帯
+======================================== */
+
+.sponsor {
+
+    width: 100%;
+
+    padding:
+        25px
+        20px;
+
+    background: white;
+
+    border-top:
+        1px solid
+        #eeeeee;
+
+}
+
+
+.sponsor-logos {
+
+    width:
+        min(
+            100%,
+            600px
+        );
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+}
+
+
+.sponsor-logos img {
+
+    width: 150px;
+
+    height: 75px;
+
+    object-fit: contain;
+
+}
+
+
+.logo-divider {
+
+    width: 1px;
+
+    height: 50px;
+
+    background: #dddddd;
+
+}
+
+
+/* ========================================
+   図鑑ページ
+======================================== */
+
+.library-page {
+
+    width:
+        min(
+            100%,
+            1000px
+        );
+
+    margin: auto;
+
+    padding:
+        25px
+        20px
+        70px;
+
+}
+
+
+/* トップへ戻る */
+
+.back-button {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    padding:
+        10px
+        16px;
+
+    color:
+        var(--green-dark);
+
+    text-decoration: none;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+}
+
+
+/* ========================================
+   図鑑ヘッダー
+======================================== */
+
+.library-header {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.library-decoration {
+
+    margin-bottom: 10px;
+
+    font-size: 20px;
+
+}
+
+
+.library-header h1 {
+
+    margin:
+        0
+        0
+        10px;
+
+    color:
+        var(--green-dark);
+
+    font-size:
+        clamp(
+            30px,
+            7vw,
+            45px
+        );
+
+}
+
+
+.library-header p {
+
+    margin: 0;
+
+    color: #68756a;
+
+}
+
+
+/* ========================================
+   開発中表示
+======================================== */
+
+.dev-warning {
+
+    width:
+        fit-content;
+
+    margin:
+        20px
+        auto;
+
+    padding:
+        9px
+        16px;
+
+    background:
+        rgba(
+            255,
+            248,
+            220,
+            0.9
+        );
+
+    color: #80651d;
+
+    border:
+        1px solid
+        #eadca7;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+}
+
+
+/* ========================================
+   発見数・開発用ボタン
+======================================== */
+
+.library-tools {
+
+    margin:
+        25px
+        0
+        35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
 
 #count {
-    font-size: 20px;
+
+    margin: 0;
+
+    padding:
+        12px
+        28px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.85
+        );
+
+    color:
+        var(--green-dark);
+
+    font-size: 21px;
+
     font-weight: bold;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 6px 18px
+        var(--shadow);
+
 }
 
-#discover-screen {
-    position: fixed;
+
+.reset-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #89918b,
+            #69726b
+        );
+
+    box-shadow:
+        0 4px 0 #4e554f;
+
+    font-size: 13px;
+
+    padding:
+        10px
+        18px;
+
+}
+
+
+/* ========================================
+   キャラクター一覧
+======================================== */
+
+.character-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                280px,
+                1fr
+            )
+        );
+
+    gap: 25px;
+
+}
+
+
+/* ========================================
+   キャラクターカード
+======================================== */
+
+.card {
+
+    position: relative;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.96
+            ),
+            rgba(
+                255,
+                250,
+                240,
+                0.96
+            )
+        );
+
+    border:
+        1px solid
+        rgba(
+            37,
+            77,
+            56,
+            0.12
+        );
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 28px
+        var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+
+}
+
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
 
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 100%;
 
-    background: rgba(0,0,0,0.9);
+    height: 7px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green-dark),
+            var(--green),
+            var(--rose-light),
+            var(--rose)
+        );
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(
+            37,
+            77,
+            56,
+            0.2
+        );
+
+}
+
+
+.card-number {
+
+    margin-bottom: 10px;
+
+    color:
+        var(--rose);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.card h2 {
+
+    min-height: 55px;
+
+    margin:
+        0
+        0
+        15px;
+
+    color:
+        var(--green-dark);
+
+    font-size: 23px;
+
+}
+
+
+.character-image-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 210px;
+
+}
+
+
+.card img {
+
+    width: 200px;
+
+    max-width: 100%;
+
+    max-height: 240px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    background:
+        #eef4eb;
+
+    border:
+        4px solid
+        #dcead7;
+
+}
+
+
+.card p {
+
+    min-height: 55px;
+
+    margin:
+        18px
+        0
+        0;
+
+    line-height: 1.7;
+
+    color: #5b685d;
+
+}
+
+
+/* ========================================
+   発見画面
+======================================== */
+
+#discover-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    padding: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(
+                220,
+                110,
+                135,
+                0.45
+            ),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(
+                100,
+                160,
+                100,
+                0.4
+            ),
+            transparent 30%
+        ),
+        linear-gradient(
+            150deg,
+            #173b2b,
+            #28543d,
+            #572c3a
+        );
+
+    overflow-y: auto;
+
+}
+
+
+.discover-content {
+
+    width:
+        min(
+            100%,
+            500px
+        );
+
+    padding:
+        35px
+        25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            0,
+            0,
+            0.25
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+}
+
+
+.discover-sparkles {
+
+    margin-bottom: 10px;
+
+    font-size: 25px;
+
+}
+
+
+.discover-label {
+
+    margin:
+        0
+        0
+        8px;
+
+    color:
+        #f7d883;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+#discover-screen h1 {
+
+    margin:
+        0
+        0
+        20px;
+
+    color: #fff3b5;
+
+    font-size:
+        clamp(
+            35px,
+            10vw,
+            55px
+        );
+
+    text-shadow:
+        0 0 15px
+        rgba(
+            255,
+            230,
+            130,
+            0.8
+        );
+
+}
+
+
+#discover-screen img {
+
+    width:
+        min(
+            70vw,
+            280px
+        );
+
+    max-height: 35vh;
+
+    object-fit: contain;
+
+    padding: 8px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    border:
+        3px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 30px
+        rgba(
+            255,
+            210,
+            150,
+            0.35
+        );
+
+    animation:
+        discoverPop
+        0.6s
+        ease-out;
+
+}
+
+
+#discover-name {
+
+    margin:
+        20px
+        0
+        10px;
 
     color: white;
 
-    display: flex;
-    flex-direction: column;
+    font-size:
+        clamp(
+            25px,
+            7vw,
+            35px
+        );
 
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
 }
 
-/* index.htmlのCSSはここ */
-#index{
-    width: 100%;
-    height: 100vh;
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+#discover-desc {
+
+    margin:
+        0
+        0
+        25px;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    line-height: 1.7;
+
+}
+
+
+#discover-screen button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe38a,
+            #dca73b
+        );
+
+    color:
+        #533b13;
+
+    box-shadow:
+        0 4px 0
+        #a4701e;
+
+}
+
+
+/* ========================================
+   発見アニメーション
+======================================== */
+
+@keyframes discoverPop {
+
+    0% {
+
+        transform:
+            scale(0.5)
+            rotate(-5deg);
+
+        opacity: 0;
+
+    }
+
+
+    70% {
+
+        transform:
+            scale(1.08)
+            rotate(2deg);
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            scale(1)
+            rotate(0);
+
+    }
+
+}
+
+
+/* ========================================
+   スマホ
+======================================== */
+
+@media (max-width: 600px) {
+
+
+    .top-content {
+
+        padding-top: 40px;
+
+    }
+
+
+    .steps {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .step {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        text-align: left;
+
+    }
+
+
+    .step-number {
+
+        flex-shrink: 0;
+
+        margin: 0;
+
+    }
+
+
+    .step p {
+
+        text-align: left;
+
+    }
+
+
+    .sponsor-logos {
+
+        gap: 15px;
+
+    }
+
+
+    .sponsor-logos img {
+
+        width: 110px;
+
+        height: 60px;
+
+    }
+
+
+    .logo-divider {
+
+        height: 40px;
+
+    }
+
+
+    .library-page {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .character-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+.school-logo {
+    width: 250px !important;
+    height: 150px !important;
 }

@@ -1,80 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>まちの精霊図鑑 - library</title>
+
+    <title>まちの精霊図鑑 - 図鑑</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- 自動整型はシフト＋オルト＋F -->
+    <!-- 発見画面 -->
+    <div id="discover-screen" style="display: none;">
 
+        <div class="discover-content">
 
+            <div class="discover-sparkles">
+                ✨　✦　✨
+            </div>
 
-    <div id="discover-screen" style="display:none;">
+            <p class="discover-label">
+                NEW SPIRIT DISCOVERED
+            </p>
 
-        <h1>✨発見！✨</h1>
+            <h1>発見！</h1>
 
-        <img id="discover-image" width="300">
+            <img id="discover-image" src="" alt="発見した精霊">
 
-        <h2 id="discover-name"></h2>
+            <h2 id="discover-name"></h2>
 
-        <p id="discover-desc"></p>
+            <p id="discover-desc"></p>
 
-        <button onclick="closeDiscoverScreen()">
-            図鑑を見る
-        </button>
+            <button onclick="closeDiscoverScreen()">
+                図鑑を見る
+            </button>
 
-    </div>
-
-    <h1>まちの精霊図鑑</h1>
-
-    <div class="dev-warning">
-        ⚠ 試作版（開発中）
-    </div>
-
-    <button onclick="resetData()">
-        開発用：データをリセット
-    </button>
-
-    <p id="count">発見数 0 / 15</p>
-
-    <div class="card">
-
-        <h2 id="char1-name">No.001 ???</h2>
-
-        <img id="char1-image" src="question.jpg" width="200">
-
-        <p id="char1-desc">
-            まだ発見していません
-        </p>
-
-        <button onclick="discoverCharacter1()">
-            発見する
-        </button>
+        </div>
 
     </div>
 
-    <div class="card">
 
-        <h2 id="char2-name">No.002 ???</h2>
+    <main class="library-page">
 
-        <img id="char2-image" src="question.jpg" width="200">
+        <a href="index.html" class="back-button">
+            ← トップへ戻る
+        </a>
 
-        <p id="char2-desc">
-            まだ発見していません
-        </p>
 
-        <button onclick="discoverCharacter2()">
-            発見する
-        </button>
+        <header class="library-header">
 
-    </div>
+            <div class="library-decoration">
+                🌿　🌹　📖　🌹　🌿
+            </div>
+
+            <h1>まちの精霊図鑑</h1>
+
+            <p>
+                街に隠れた精霊たちを探そう
+            </p>
+
+        </header>
+
+
+        <div class="dev-warning">
+            ⚠ 試作版（開発中）
+        </div>
+
+
+        <div class="library-tools">
+
+            <p id="count">発見数 0 / 15</p>
+
+            <button class="reset-button" onclick="resetData()">
+                データをリセット
+            </button>
+
+        </div>
+
+
+        <!-- キャラクター一覧 -->
+        <section class="character-list">
+
+
+            <!-- キャラクター1 -->
+            <div class="card">
+
+                <div class="card-number">
+                    SPIRIT No.001
+                </div>
+
+                <h2 id="char1-name">???</h2>
+
+                <div class="character-image-box">
+
+                    <img
+                        id="char1-image"
+                        src="question.jpg"
+                        alt="未発見の精霊"
+                    >
+
+                </div>
+
+                <p id="char1-desc">
+                    まだ発見していません
+                </p>
+
+            </div>
+
+
+            <!-- キャラクター2 -->
+            <div class="card">
+
+                <div class="card-number">
+                    SPIRIT No.002
+                </div>
+
+                <h2 id="char2-name">???</h2>
+
+                <div class="character-image-box">
+
+                    <img
+                        id="char2-image"
+                        src="question.jpg"
+                        alt="未発見の精霊"
+                    >
+
+                </div>
+
+                <p id="char2-desc">
+                    まだ発見していません
+                </p>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
