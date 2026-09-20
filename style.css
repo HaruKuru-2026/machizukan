@@ -45,11 +45,9 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
 
@@ -123,19 +121,15 @@ button {
 
 }
 
-
 button:hover {
 
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 
 }
 
-
 button:active {
 
-    transform:
-        translateY(3px);
+    transform: translateY(3px);
 
     box-shadow:
         0 1px 0 #803247;
@@ -156,9 +150,6 @@ button:active {
     flex-direction: column;
 
 }
-
-
-/* メイン部分 */
 
 .top-content {
 
@@ -183,16 +174,12 @@ button:active {
 
 
 /* ========================================
-   タイトルカード
+   タイトル
 ======================================== */
 
 .title {
 
-    width:
-        min(
-            92%,
-            560px
-        );
+    width: min(92%, 560px);
 
     padding:
         42px
@@ -201,21 +188,11 @@ button:active {
     text-align: center;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.88
-        );
+        rgba(255,255,255,0.88);
 
     border:
         1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.9
-        );
+        rgba(255,255,255,0.9);
 
     border-radius: 32px;
 
@@ -225,7 +202,6 @@ button:active {
 
 }
 
-
 .title-decoration {
 
     margin-bottom: 15px;
@@ -233,7 +209,6 @@ button:active {
     font-size: 22px;
 
 }
-
 
 .title h1 {
 
@@ -246,20 +221,14 @@ button:active {
         var(--green-dark);
 
     font-size:
-        clamp(
-            34px,
-            9vw,
-            54px
-        );
+        clamp(34px, 9vw, 54px);
 
-    letter-spacing:
-        0.08em;
+    letter-spacing: 0.08em;
 
     text-shadow:
         0 2px 0 white;
 
 }
-
 
 .title p {
 
@@ -268,11 +237,7 @@ button:active {
     color: #6d6670;
 
     font-size:
-        clamp(
-            15px,
-            4vw,
-            18px
-        );
+        clamp(15px, 4vw, 18px);
 
     line-height: 1.8;
 
@@ -285,11 +250,7 @@ button:active {
 
 .menu {
 
-    width:
-        min(
-            92%,
-            440px
-        );
+    width: min(92%, 440px);
 
     margin-top: 28px;
 
@@ -298,7 +259,6 @@ button:active {
     gap: 14px;
 
 }
-
 
 .menu-button {
 
@@ -315,12 +275,7 @@ button:active {
         25px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.9
-        );
+        rgba(255,255,255,0.9);
 
     color:
         var(--green-dark);
@@ -343,23 +298,15 @@ button:active {
 
 }
 
-
 .menu-button:hover {
 
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     box-shadow:
         0 13px 25px
-        rgba(
-            37,
-            77,
-            56,
-            0.2
-        );
+        rgba(37,77,56,0.2);
 
 }
-
 
 .menu-icon {
 
@@ -374,11 +321,7 @@ button:active {
 
 .how-to-play {
 
-    width:
-        min(
-            92%,
-            700px
-        );
+    width: min(92%, 700px);
 
     margin-top: 60px;
 
@@ -389,7 +332,6 @@ button:active {
     text-align: center;
 
 }
-
 
 .how-to-play h2 {
 
@@ -405,21 +347,16 @@ button:active {
 
 }
 
-
 .steps {
 
     display: grid;
 
     grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+        repeat(3, 1fr);
 
     gap: 15px;
 
 }
-
 
 .step {
 
@@ -428,26 +365,15 @@ button:active {
         12px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.7
-        );
+        rgba(255,255,255,0.7);
 
     border-radius: 20px;
 
     box-shadow:
         0 8px 18px
-        rgba(
-            37,
-            77,
-            56,
-            0.08
-        );
+        rgba(37,77,56,0.08);
 
 }
-
 
 .step-number {
 
@@ -477,7 +403,6 @@ button:active {
 
 }
 
-
 .step p {
 
     margin: 0;
@@ -490,7 +415,7 @@ button:active {
 
 
 /* ========================================
-   下の白いロゴ帯
+   ロゴ・スポンサー風エリア
 ======================================== */
 
 .sponsor {
@@ -498,7 +423,7 @@ button:active {
     width: 100%;
 
     padding:
-        25px
+        28px
         20px;
 
     background: white;
@@ -509,14 +434,10 @@ button:active {
 
 }
 
-
 .sponsor-logos {
 
     width:
-        min(
-            100%,
-            600px
-        );
+        min(100%, 650px);
 
     margin: auto;
 
@@ -526,10 +447,9 @@ button:active {
 
     justify-content: center;
 
-    gap: 35px;
+    gap: 40px;
 
 }
-
 
 .sponsor-logos img {
 
@@ -541,12 +461,21 @@ button:active {
 
 }
 
+/* 高校ロゴだけ少し大きく */
+
+.sponsor-logos .school-logo {
+
+    width: 230px;
+
+    height: 110px;
+
+}
 
 .logo-divider {
 
     width: 1px;
 
-    height: 50px;
+    height: 55px;
 
     background: #dddddd;
 
@@ -560,10 +489,7 @@ button:active {
 .library-page {
 
     width:
-        min(
-            100%,
-            1000px
-        );
+        min(100%, 1100px);
 
     margin: auto;
 
@@ -573,9 +499,6 @@ button:active {
         70px;
 
 }
-
-
-/* トップへ戻る */
 
 .back-button {
 
@@ -593,12 +516,7 @@ button:active {
     text-decoration: none;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.75
-        );
+        rgba(255,255,255,0.75);
 
     border-radius: 20px;
 
@@ -619,7 +537,6 @@ button:active {
 
 }
 
-
 .library-decoration {
 
     margin-bottom: 10px;
@@ -627,7 +544,6 @@ button:active {
     font-size: 20px;
 
 }
-
 
 .library-header h1 {
 
@@ -640,14 +556,9 @@ button:active {
         var(--green-dark);
 
     font-size:
-        clamp(
-            30px,
-            7vw,
-            45px
-        );
+        clamp(30px, 7vw, 45px);
 
 }
-
 
 .library-header p {
 
@@ -664,8 +575,7 @@ button:active {
 
 .dev-warning {
 
-    width:
-        fit-content;
+    width: fit-content;
 
     margin:
         20px
@@ -676,12 +586,7 @@ button:active {
         16px;
 
     background:
-        rgba(
-            255,
-            248,
-            220,
-            0.9
-        );
+        rgba(255,248,220,0.9);
 
     color: #80651d;
 
@@ -697,7 +602,7 @@ button:active {
 
 
 /* ========================================
-   発見数・開発用ボタン
+   発見数
 ======================================== */
 
 .library-tools {
@@ -717,7 +622,6 @@ button:active {
 
 }
 
-
 #count {
 
     margin: 0;
@@ -727,12 +631,7 @@ button:active {
         28px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.85
-        );
+        rgba(255,255,255,0.85);
 
     color:
         var(--green-dark);
@@ -748,7 +647,6 @@ button:active {
         var(--shadow);
 
 }
-
 
 .reset-button {
 
@@ -777,18 +675,18 @@ button:active {
 
 .character-list {
 
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
     display: grid;
 
     grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(
-                280px,
-                1fr
-            )
-        );
+        repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 28px;
 
 }
 
@@ -801,6 +699,10 @@ button:active {
 
     position: relative;
 
+    width: 100%;
+
+    min-width: 0;
+
     padding: 25px;
 
     text-align: center;
@@ -808,28 +710,13 @@ button:active {
     background:
         linear-gradient(
             145deg,
-            rgba(
-                255,
-                255,
-                255,
-                0.96
-            ),
-            rgba(
-                255,
-                250,
-                240,
-                0.96
-            )
+            rgba(255,255,255,0.96),
+            rgba(255,250,240,0.96)
         );
 
     border:
         1px solid
-        rgba(
-            37,
-            77,
-            56,
-            0.12
-        );
+        rgba(37,77,56,0.12);
 
     border-radius: 25px;
 
@@ -844,7 +731,6 @@ button:active {
         box-shadow 0.25s;
 
 }
-
 
 .card::before {
 
@@ -870,27 +756,22 @@ button:active {
 
 }
 
-
 .card:hover {
 
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     box-shadow:
         0 18px 35px
-        rgba(
-            37,
-            77,
-            56,
-            0.2
-        );
+        rgba(37,77,56,0.2);
 
 }
 
 
+/* No.001など */
+
 .card-number {
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 
     color:
         var(--rose);
@@ -904,24 +785,32 @@ button:active {
 }
 
 
-.card h2 {
+/* キャラクター名 */
 
-    min-height: 55px;
+.card h2 {
 
     margin:
         0
         0
         15px;
 
+    min-height: 0;
+
     color:
         var(--green-dark);
 
     font-size: 23px;
 
+    line-height: 1.4;
+
 }
 
 
+/* キャラクター画像 */
+
 .character-image-box {
+
+    min-height: 210px;
 
     display: flex;
 
@@ -929,18 +818,17 @@ button:active {
 
     align-items: center;
 
-    min-height: 210px;
-
 }
 
-
 .card img {
+
+    display: block;
 
     width: 200px;
 
     max-width: 100%;
 
-    max-height: 240px;
+    height: 210px;
 
     object-fit: contain;
 
@@ -955,6 +843,8 @@ button:active {
 
 }
 
+
+/* 説明 */
 
 .card p {
 
@@ -997,22 +887,12 @@ button:active {
     background:
         radial-gradient(
             circle at 50% 30%,
-            rgba(
-                220,
-                110,
-                135,
-                0.45
-            ),
+            rgba(220,110,135,0.45),
             transparent 25%
         ),
         radial-gradient(
             circle at 20% 80%,
-            rgba(
-                100,
-                160,
-                100,
-                0.4
-            ),
+            rgba(100,160,100,0.4),
             transparent 30%
         ),
         linear-gradient(
@@ -1023,55 +903,39 @@ button:active {
         );
 
     overflow-y: auto;
+    color: #ffffff;
+
+    text-shadow:
+    0 3px 0 #254d38,
+    0 6px 15px rgba(0, 0, 0, 0.35);
 
 }
-
 
 .discover-content {
 
     width:
-        min(
-            100%,
-            500px
-        );
+        min(100%, 500px);
 
     padding:
-        35px
-        25px;
+        35px 25px;
 
     border-radius: 30px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.08
-        );
+        rgba(255,255,255,0.08);
 
     border:
         1px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.2
-        );
+        rgba(255,255,255,0.2);
 
     box-shadow:
         0 20px 60px
-        rgba(
-            0,
-            0,
-            0,
-            0.25
-        );
+        rgba(0,0,0,0.25);
 
     backdrop-filter:
         blur(10px);
 
 }
-
 
 .discover-sparkles {
 
@@ -1080,7 +944,6 @@ button:active {
     font-size: 25px;
 
 }
-
 
 .discover-label {
 
@@ -1100,7 +963,6 @@ button:active {
 
 }
 
-
 #discover-screen h1 {
 
     margin:
@@ -1111,31 +973,14 @@ button:active {
     color: #fff3b5;
 
     font-size:
-        clamp(
-            35px,
-            10vw,
-            55px
-        );
-
-    text-shadow:
-        0 0 15px
-        rgba(
-            255,
-            230,
-            130,
-            0.8
-        );
+        clamp(35px,10vw,55px);
 
 }
-
 
 #discover-screen img {
 
     width:
-        min(
-            70vw,
-            280px
-        );
+        min(70vw,280px);
 
     max-height: 35vh;
 
@@ -1144,32 +989,17 @@ button:active {
     padding: 8px;
 
     background:
-        rgba(
-            255,
-            255,
-            255,
-            0.12
-        );
+        rgba(255,255,255,0.12);
 
     border:
         3px solid
-        rgba(
-            255,
-            255,
-            255,
-            0.75
-        );
+        rgba(255,255,255,0.75);
 
     border-radius: 24px;
 
     box-shadow:
         0 0 30px
-        rgba(
-            255,
-            210,
-            150,
-            0.35
-        );
+        rgba(255,210,150,0.35);
 
     animation:
         discoverPop
@@ -1177,7 +1007,6 @@ button:active {
         ease-out;
 
 }
-
 
 #discover-name {
 
@@ -1189,14 +1018,9 @@ button:active {
     color: white;
 
     font-size:
-        clamp(
-            25px,
-            7vw,
-            35px
-        );
+        clamp(25px,7vw,35px);
 
 }
-
 
 #discover-desc {
 
@@ -1206,17 +1030,11 @@ button:active {
         25px;
 
     color:
-        rgba(
-            255,
-            255,
-            255,
-            0.9
-        );
+        rgba(255,255,255,0.9);
 
     line-height: 1.7;
 
 }
-
 
 #discover-screen button {
 
@@ -1253,7 +1071,6 @@ button:active {
 
     }
 
-
     70% {
 
         transform:
@@ -1263,7 +1080,6 @@ button:active {
         opacity: 1;
 
     }
-
 
     100% {
 
@@ -1277,15 +1093,363 @@ button:active {
 
 
 /* ========================================
+   キャラクター詳細画面
+======================================== */
+
+#character-detail-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 900;
+
+    padding:
+        30px
+        20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    /*
+       ここが重要。
+       centerではなくflex-startにすることで、
+       スマホで上の「名前」が画面外に行きにくくなる。
+    */
+    align-items: flex-start;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(255,255,255,0.8),
+            transparent 30%
+        ),
+        linear-gradient(
+            150deg,
+            #e9f3e5,
+            #fffaf0
+        );
+
+    overflow-y: auto;
+
+}
+
+.character-detail-content {
+
+    position: relative;
+
+    width:
+        min(100%,520px);
+
+    margin:
+        10px
+        auto
+        30px;
+
+    padding:
+        45px
+        25px
+        30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    box-shadow:
+        0 15px 50px
+        rgba(37,77,56,0.2);
+
+    text-align: center;
+
+}
+
+
+/* 閉じるボタン */
+
+.detail-close-button {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    width: 45px;
+
+    height: 45px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background:
+        #254d38;
+
+    color: white;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    box-shadow: none;
+
+    cursor: pointer;
+
+}
+
+
+/* No.001 */
+
+#detail-number {
+
+    margin:
+        0
+        0
+        5px;
+
+    color:
+        #4d7c5a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+/* ★キャラクター名 */
+
+#detail-name {
+
+    display: block;
+
+    margin:
+        0
+        0
+        20px;
+
+    color:
+        #254d38;
+
+    font-size:
+        clamp(28px,7vw,40px);
+
+    line-height: 1.3;
+
+}
+
+
+/* 詳細画像 */
+
+#detail-image {
+
+    display: block;
+
+    width:
+        min(80vw,350px);
+
+    height: auto;
+
+    max-height: 45vh;
+
+    margin:
+        0
+        auto;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    border-radius: 20px;
+
+    background: #fff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(37,77,56,0.15);
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+#detail-image:hover {
+
+    transform:
+        scale(1.03);
+
+}
+
+
+/* 画像をタップ */
+
+.image-hint {
+
+    margin:
+        10px
+        0
+        20px;
+
+    color: #777;
+
+    font-size: 12px;
+
+}
+
+
+/* 説明 */
+
+#detail-desc {
+
+    margin:
+        0
+        auto
+        25px;
+
+    max-width: 430px;
+
+    color:
+        #334238;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+
+}
+
+
+/* 詳細情報 */
+
+#detail-info {
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background:
+        #f4f8f2;
+
+    text-align: left;
+
+}
+
+#detail-info p {
+
+    margin:
+        0
+        0
+        15px;
+
+    line-height: 1.7;
+
+}
+
+#detail-info p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+#detail-info strong {
+
+    color:
+        #254d38;
+
+}
+
+
+/* ========================================
+   大きな画像
+======================================== */
+
+#big-image-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(0,0,0,0.9);
+
+    cursor: zoom-out;
+
+}
+
+#big-image {
+
+    max-width: 95vw;
+
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 50px
+        rgba(0,0,0,0.5);
+
+}
+
+#big-image-screen p {
+
+    margin-top: 15px;
+
+    color: white;
+
+    font-size: 13px;
+
+}
+
+
+/* ========================================
+   タブレット
+======================================== */
+
+@media (max-width: 900px) {
+
+    .character-list {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* ========================================
    スマホ
 ======================================== */
 
 @media (max-width: 600px) {
 
-
     .top-content {
 
-        padding-top: 40px;
+        padding:
+            40px
+            15px
+            50px;
 
     }
 
@@ -1326,18 +1490,40 @@ button:active {
     }
 
 
+    /* ロゴ */
+
+    .sponsor {
+
+        padding:
+            22px
+            12px;
+
+    }
+
+
     .sponsor-logos {
 
-        gap: 15px;
+        gap: 12px;
 
     }
 
 
     .sponsor-logos img {
 
-        width: 110px;
+        width: 100px;
 
-        height: 60px;
+        height: 55px;
+
+    }
+
+
+    /* 高校ロゴ */
+
+    .sponsor-logos .school-logo {
+
+        width: 150px;
+
+        height: 75px;
 
     }
 
@@ -1349,11 +1535,16 @@ button:active {
     }
 
 
+    /* 図鑑 */
+
     .library-page {
 
-        padding-left: 15px;
+        width: 100%;
 
-        padding-right: 15px;
+        padding:
+            20px
+            14px
+            50px;
 
     }
 
@@ -1362,11 +1553,152 @@ button:active {
 
         grid-template-columns: 1fr;
 
+        gap: 20px;
+
+    }
+
+
+    .card {
+
+        padding:
+            25px
+            18px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .card img {
+
+        width: 180px;
+
+        height: 200px;
+
+    }
+
+
+    /* 詳細画面 */
+
+    #character-detail-screen {
+
+        padding:
+            15px
+            12px;
+
+    }
+
+
+    .character-detail-content {
+
+        width: 100%;
+
+        margin:
+            0
+            auto
+            20px;
+
+        padding:
+            55px
+            18px
+            25px;
+
+        border-radius: 25px;
+
+    }
+
+
+    #detail-name {
+
+        font-size: 30px;
+
+    }
+
+
+    #detail-image {
+
+        width: min(82vw,320px);
+
+        max-height: 40vh;
+
+    }
+
+
+    #detail-info {
+
+        padding: 16px;
+
     }
 
 }
 
-.school-logo {
-    width: 250px !important;
-    height: 150px !important;
+
+/* ========================================
+   小さいスマホ
+======================================== */
+
+@media (max-width: 380px) {
+
+    .library-header h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .card h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .card img {
+
+        width: 160px;
+
+        height: 180px;
+
+    }
+
+
+    .character-detail-content {
+
+        padding-left: 14px;
+
+        padding-right: 14px;
+
+    }
+
+
+    #detail-name {
+
+        font-size: 27px;
+
+    }
+
+}
+/* ========================================
+   発見画面：画面上部が切れないようにする
+======================================== */
+
+#discover-screen {
+    min-height: 100vh;
+    height: auto;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 40px 20px 60px;
+}
+
+.discover-content {
+    margin: 20px auto;
 }

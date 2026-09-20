@@ -27,11 +27,39 @@
 
             <h1>発見！</h1>
 
-            <img id="discover-image" src="" alt="発見した精霊">
+            <img
+                id="discover-image"
+                src=""
+                alt="発見した精霊"
+            >
 
             <h2 id="discover-name"></h2>
 
             <p id="discover-desc"></p>
+
+            <div id="discover-details">
+
+                <p>
+                    <strong>✨ 必殺技</strong><br>
+                    <span id="discover-skill"></span>
+                </p>
+
+                <p>
+                    <strong>💬 口ぐせ</strong><br>
+                    <span id="discover-catchphrase"></span>
+                </p>
+
+                <p>
+                    <strong>📍 好きな場所</strong><br>
+                    <span id="discover-favorite-place"></span>
+                </p>
+
+                <p>
+                    <strong>🎨 作者</strong><br>
+                    <span id="discover-author"></span>
+                </p>
+
+            </div>
 
             <button onclick="closeDiscoverScreen()">
                 図鑑を見る
@@ -44,11 +72,13 @@
 
     <main class="library-page">
 
+        <!-- トップへ戻る -->
         <a href="index.html" class="back-button">
             ← トップへ戻る
         </a>
 
 
+        <!-- 図鑑ヘッダー -->
         <header class="library-header">
 
             <div class="library-decoration">
@@ -64,16 +94,23 @@
         </header>
 
 
+        <!-- 開発中表示 -->
         <div class="dev-warning">
             ⚠ 試作版（開発中）
         </div>
 
 
+        <!-- 発見数・開発用ボタン -->
         <div class="library-tools">
 
-            <p id="count">発見数 0 / 15</p>
+            <p id="count">
+                発見数 0 / 15
+            </p>
 
-            <button class="reset-button" onclick="resetData()">
+            <button
+                class="reset-button"
+                onclick="resetData()"
+            >
                 データをリセット
             </button>
 
@@ -81,62 +118,86 @@
 
 
         <!-- キャラクター一覧 -->
-        <section class="character-list">
+        <!-- JavaScriptがここに自動生成します -->
+        <section
+            id="character-list"
+            class="character-list"
+        ></section>
+
+        <!-- キャラクター詳細画面 -->
+<div id="character-detail-screen" style="display: none;">
+
+    <div class="character-detail-content">
+
+        <button
+            class="detail-close-button"
+            onclick="closeCharacterDetail()"
+        >
+            ×
+        </button>
+
+        <p id="detail-number"></p>
+
+        <h1 id="detail-name"></h1>
+
+        <img
+            id="detail-image"
+            src=""
+            alt=""
+            onclick="openBigImage()"
+        >
+
+        <p class="image-hint">
+            画像をタップすると大きく見られます
+        </p>
+
+        <p id="detail-desc"></p>
+
+        <div id="detail-info">
+
+            <p>
+                <strong>✨ 必殺技</strong><br>
+                <span id="detail-skill"></span>
+            </p>
+
+            <p>
+                <strong>💬 口ぐせ</strong><br>
+                <span id="detail-catchphrase"></span>
+            </p>
+
+            <p>
+                <strong>📍 好きな場所</strong><br>
+                <span id="detail-favorite-place"></span>
+            </p>
+
+            <p>
+                <strong>🎨 作者</strong><br>
+                <span id="detail-author"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
 
-            <!-- キャラクター1 -->
-            <div class="card">
+    <!-- 大きな画像表示 -->
+    <div
+        id="big-image-screen"
+        style="display: none;"
+        onclick="closeBigImage()"
+    >
 
-                <div class="card-number">
-                    SPIRIT No.001
-                </div>
+        <img
+            id="big-image"
+            src=""
+            alt=""
+        >
 
-                <h2 id="char1-name">???</h2>
+        <p>タップして閉じる</p>
 
-                <div class="character-image-box">
-
-                    <img
-                        id="char1-image"
-                        src="question.jpg"
-                        alt="未発見の精霊"
-                    >
-
-                </div>
-
-                <p id="char1-desc">
-                    まだ発見していません
-                </p>
-
-            </div>
-
-
-            <!-- キャラクター2 -->
-            <div class="card">
-
-                <div class="card-number">
-                    SPIRIT No.002
-                </div>
-
-                <h2 id="char2-name">???</h2>
-
-                <div class="character-image-box">
-
-                    <img
-                        id="char2-image"
-                        src="question.jpg"
-                        alt="未発見の精霊"
-                    >
-
-                </div>
-
-                <p id="char2-desc">
-                    まだ発見していません
-                </p>
-
-            </div>
-
-
-        </section>
+    </div>
 
     </main>
 
