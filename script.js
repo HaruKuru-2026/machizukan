@@ -7,17 +7,31 @@ const characters = {
     "1": {
         storageKey: "machizukan_char1",
         number: "No.001",
-        name: "ドングリくん",
-        image: "Dongri.png",
-        desc: "街のどこかに現れる謎のドングリ"
+        name: "おにクル",
+        image: "harukuru1.jpeg",
+        desc: "おにクルの精霊",
+
+        skill: "バットなげ",
+        catchphrase: "クル",
+        favoritePlace: "夜の暗い町",
+
+        author: "かな",
+        authorAge: "10さい"
     },
 
     "2": {
         storageKey: "machizukan_char2",
         number: "No.002",
-        name: "ヤチュウゴロン",
-        image: "Yakutyuugoron.jpg",
-        desc: "夜のどこかに現れる謎の怪物"
+        name: "イヌ兵士",
+        image: "harukuru2.jpeg",
+        desc: "ブーツをはいた犬の兵士",
+
+        skill: "ブーツキック",
+        catchphrase: "ボクの剣、短！",
+        favoritePlace: "おにクルの五階",
+
+        author: "つむ",
+        authorAge: "8さい"
     },
 
     "3": {
@@ -40,33 +54,62 @@ const characters = {
     "4": {
         storageKey: "machizukan_char4",
         number: "No.004",
-        name: "仮の名前4",
-        image: "character4.png",
-        desc: "仮の説明4"
+        name: "まらちゃん",
+        image: "harukuru4.jpeg",
+        desc: "正体が謎に包まれた精霊",
+
+        skill: "なし",
+        catchphrase: "あのさーこれさー",
+        favoritePlace: "ようちえん",
+
+        author: "しま",
+        authorAge: "4さい"
+
     },
 
     "5": {
         storageKey: "machizukan_char5",
         number: "No.005",
-        name: "仮の名前5",
-        image: "character5.png",
-        desc: "仮の説明5"
+        name: "へっぽこくん",
+        image: "harukuru5.jpeg",
+        desc: "足に数式が書かれているが理由は謎",
+
+        skill: "パンチ",
+        catchphrase: "しまったー！",
+        favoritePlace: "自分の家",
+
+        author: "へっぽこ",
+        authorAge: "21さい!?"
     },
 
     "6": {
         storageKey: "machizukan_char6",
         number: "No.006",
-        name: "仮の名前6",
-        image: "character6.png",
-        desc: "仮の説明6"
+        name: "まつげタコ",
+        image: "harukuru6.jpeg",
+        desc: "ハートを飛ばすタコ",
+
+        skill: "ハートすみをはく",
+        catchphrase: "くっつくわよ",
+        favoritePlace: "たこつぼ",
+
+        author: "いばらキッズ",
+        authorAge: "ひみつ"
     },
 
     "7": {
         storageKey: "machizukan_char7",
         number: "No.007",
-        name: "仮の名前7",
-        image: "character7.png",
-        desc: "仮の説明7"
+        name: "ガオ",
+        image: "harukuru7.jpeg",
+        desc: "個性的な笑い方をするネコのような生き物",
+
+        skill: "すごい圧",
+        catchphrase: "グワッ",
+        favoritePlace: "ぽかぽかしているところ",
+
+        author: "みー",
+        authorAge: "10さい"
     },
 
     "8": {
