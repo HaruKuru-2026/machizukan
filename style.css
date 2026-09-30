@@ -1702,3 +1702,18 @@ button:active {
 .discover-content {
     margin: 20px auto;
 }
+
+/* ========================================
+   掲載についてのお知らせ
+======================================== */
+
+.copyright-note {
+    max-width: 700px;
+    margin: 50px auto 30px;
+    padding: 20px;
+    
+    color: rgba(51, 66, 56, 0.7);
+    font-size: 12px;
+    line-height: 1.9;
+    text-align: center;
+}

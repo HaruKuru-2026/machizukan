@@ -115,52 +115,92 @@ const characters = {
     "8": {
         storageKey: "machizukan_char8",
         number: "No.008",
-        name: "仮の名前8",
-        image: "character8.png",
-        desc: "仮の説明8"
+        name: "あおい",
+        image: "harukuru8.jpeg",
+        desc: "青いかみの女の子",
+
+        skill: "とっきゅうこうげき",
+        catchphrase: "・・・だろ！！",
+        favoritePlace: "名探偵コナ◯てん",
+
+        author: "まゆ",
+        authorAge: "6さい"
     },
 
     "9": {
-        storageKey: "machizukan_char9",
+          storageKey: "machizukan_char9",
         number: "No.009",
-        name: "仮の名前9",
-        image: "character9.png",
-        desc: "仮の説明9"
+        name: "にじいろきらきらマン",
+        image: "harukuru9.jpeg",
+        desc: "にじいろの太陽のような精霊",
+
+        skill: "その人のきらきら（すてきなところ）をてらすこと✨",
+        catchphrase: "きらっと！！",
+        favoritePlace: "不明",
+
+        author: "不明"
     },
 
     "10": {
         storageKey: "machizukan_char10",
         number: "No.010",
-        name: "仮の名前10",
-        image: "character10.png",
-        desc: "仮の説明10"
+        name: "にゃーご",
+        image: "harukuru10.jpeg",
+        desc: "リボンをつけたネコのような生き物",
+
+        skill: "ひっかく",
+        catchphrase: "にゃ～～",
+        favoritePlace: "布団のなか",
+
+        author: "つんつん"
     },
 
     "11": {
         storageKey: "machizukan_char11",
         number: "No.011",
-        name: "仮の名前11",
-        image: "character11.png",
-        desc: "仮の説明11"
+        name: "ほのうまん",
+        image: "harukuru11.jpeg",
+        desc: "炎の精霊",
+
+        skill: "ほのうをなげる",
+        catchphrase: "ほのうでくらえ",
+        favoritePlace: "きたしんほーる",
+
+        author: "ティラノ",
+        authorAge: "6さい"
     },
 
     "12": {
         storageKey: "machizukan_char12",
         number: "No.012",
-        name: "仮の名前12",
-        image: "character12.png",
-        desc: "仮の説明12"
+        name: "ステラちゃん✨",
+        image: "harukuru12.jpeg",
+        desc: "星の女の子",
+
+        skill: "『スタリウム～！！』",
+        catchphrase: "『ねむい～』『ねむい！』『ねる！』",
+        favoritePlace: "プラネタリウム✨",
+
+        author: "ペルシャ",
+        authorAge: "12さい"
     },
 
     "13": {
         storageKey: "machizukan_char13",
         number: "No.013",
-        name: "仮の名前13",
-        image: "character13.png",
-        desc: "仮の説明13"
+        name: "いちごミルクマ",
+        image: "harukuru13.jpeg",
+        desc: "いちごミルクのクマ",
+
+        skill: "いちごミルクリーミー（？）",
+        catchphrase: "ミルクマァ",
+        favoritePlace: "いちごミルクパックの中",
+
+        author: "ペルシャ",
+        authorAge: "12さい"
     },
 
-    "14": {
+ /*   "14": {
         storageKey: "machizukan_char14",
         number: "No.014",
         name: "仮の名前14",
@@ -174,7 +214,7 @@ const characters = {
         name: "仮の名前15",
         image: "character15.png",
         desc: "仮の説明15"
-    }
+    }*/
 
 };
 
